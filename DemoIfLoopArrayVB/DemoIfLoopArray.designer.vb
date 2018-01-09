@@ -77,7 +77,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbDoWhileLoopDemoBreakDescription = New System.Windows.Forms.Label()
         Me.lbDoWhileLoopBreakDemoInput = New System.Windows.Forms.Label()
         Me.grpCreateArray = New System.Windows.Forms.GroupBox()
-        Me.lbCreateArrayDesciption = New System.Windows.Forms.Label()
+        Me.lbCreateArrayDescription = New System.Windows.Forms.Label()
         Me.lbCreateArrayInput = New System.Windows.Forms.Label()
         Me.grpMethodDemo = New System.Windows.Forms.GroupBox()
         Me.lbMethodDemoDesciption = New System.Windows.Forms.Label()
@@ -89,6 +89,14 @@ Partial Class frmDemoIfLoopArray
         Me.lblReset = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.grpMethodAdd = New System.Windows.Forms.GroupBox()
+        Me.lbNumberTwo = New System.Windows.Forms.Label()
+        Me.tbNumberTwo = New System.Windows.Forms.TextBox()
+        Me.lbAddFunctionDescription = New System.Windows.Forms.Label()
+        Me.lbAddDemoOutput = New System.Windows.Forms.Label()
+        Me.lbNumberOne = New System.Windows.Forms.Label()
+        Me.tbNumberOne = New System.Windows.Forms.TextBox()
+        Me.btnAddDemo = New System.Windows.Forms.Button()
         Me.grpIf.SuspendLayout()
         Me.grpNestedIf.SuspendLayout()
         Me.grpForLoop.SuspendLayout()
@@ -100,6 +108,7 @@ Partial Class frmDemoIfLoopArray
         Me.grpCreateArray.SuspendLayout()
         Me.grpMethodDemo.SuspendLayout()
         Me.grpReset.SuspendLayout()
+        Me.grpMethodAdd.SuspendLayout()
         Me.SuspendLayout()
         '
         'grpIf
@@ -604,7 +613,7 @@ Partial Class frmDemoIfLoopArray
         '
         'grpCreateArray
         '
-        Me.grpCreateArray.Controls.Add(Me.lbCreateArrayDesciption)
+        Me.grpCreateArray.Controls.Add(Me.lbCreateArrayDescription)
         Me.grpCreateArray.Controls.Add(Me.lbCreateArrayOutput)
         Me.grpCreateArray.Controls.Add(Me.lbCreateArrayInput)
         Me.grpCreateArray.Controls.Add(Me.tbCreateArrayInput)
@@ -616,13 +625,13 @@ Partial Class frmDemoIfLoopArray
         Me.grpCreateArray.TabStop = False
         Me.grpCreateArray.Text = "&9. Create Array"
         '
-        'lbCreateArrayDesciption
+        'lbCreateArrayDescription
         '
-        Me.lbCreateArrayDesciption.Location = New System.Drawing.Point(12, 17)
-        Me.lbCreateArrayDesciption.Name = "lbCreateArrayDesciption"
-        Me.lbCreateArrayDesciption.Size = New System.Drawing.Size(163, 78)
-        Me.lbCreateArrayDesciption.TabIndex = 0
-        Me.lbCreateArrayDesciption.Text = "Enter a number and click Enter. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This will create an array of the " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "number of el" &
+        Me.lbCreateArrayDescription.Location = New System.Drawing.Point(12, 17)
+        Me.lbCreateArrayDescription.Name = "lbCreateArrayDescription"
+        Me.lbCreateArrayDescription.Size = New System.Drawing.Size(163, 78)
+        Me.lbCreateArrayDescription.TabIndex = 0
+        Me.lbCreateArrayDescription.Text = "Enter a number and click Enter. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This will create an array of the " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "number of el" &
     "ements specified. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Then each element of the array" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "will be filled by looping th" &
     "e array " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "and countingby 2s."
         '
@@ -641,12 +650,12 @@ Partial Class frmDemoIfLoopArray
         Me.grpMethodDemo.Controls.Add(Me.lbMethodInput)
         Me.grpMethodDemo.Controls.Add(Me.tbMethodInput)
         Me.grpMethodDemo.Controls.Add(Me.btnMethodDemo)
-        Me.grpMethodDemo.Location = New System.Drawing.Point(208, 438)
+        Me.grpMethodDemo.Location = New System.Drawing.Point(404, 440)
         Me.grpMethodDemo.Name = "grpMethodDemo"
         Me.grpMethodDemo.Size = New System.Drawing.Size(190, 237)
-        Me.grpMethodDemo.TabIndex = 9
+        Me.grpMethodDemo.TabIndex = 10
         Me.grpMethodDemo.TabStop = False
-        Me.grpMethodDemo.Text = "10. Method/&Function"
+        Me.grpMethodDemo.Text = "11. Method/&Function"
         '
         'lbMethodDemoDesciption
         '
@@ -693,12 +702,12 @@ Partial Class frmDemoIfLoopArray
         '
         Me.grpReset.Controls.Add(Me.lblReset)
         Me.grpReset.Controls.Add(Me.btnReset)
-        Me.grpReset.Location = New System.Drawing.Point(404, 437)
+        Me.grpReset.Location = New System.Drawing.Point(600, 439)
         Me.grpReset.Name = "grpReset"
         Me.grpReset.Size = New System.Drawing.Size(190, 237)
-        Me.grpReset.TabIndex = 10
+        Me.grpReset.TabIndex = 11
         Me.grpReset.TabStop = False
-        Me.grpReset.Text = "11. Method/&Void Function"
+        Me.grpReset.Text = "12. Method/&Void Function"
         '
         'lblReset
         '
@@ -729,6 +738,80 @@ Partial Class frmDemoIfLoopArray
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
+        'grpMethodAdd
+        '
+        Me.grpMethodAdd.Controls.Add(Me.lbNumberTwo)
+        Me.grpMethodAdd.Controls.Add(Me.tbNumberTwo)
+        Me.grpMethodAdd.Controls.Add(Me.lbAddFunctionDescription)
+        Me.grpMethodAdd.Controls.Add(Me.lbAddDemoOutput)
+        Me.grpMethodAdd.Controls.Add(Me.lbNumberOne)
+        Me.grpMethodAdd.Controls.Add(Me.tbNumberOne)
+        Me.grpMethodAdd.Controls.Add(Me.btnAddDemo)
+        Me.grpMethodAdd.Location = New System.Drawing.Point(208, 440)
+        Me.grpMethodAdd.Name = "grpMethodAdd"
+        Me.grpMethodAdd.Size = New System.Drawing.Size(190, 237)
+        Me.grpMethodAdd.TabIndex = 9
+        Me.grpMethodAdd.TabStop = False
+        Me.grpMethodAdd.Text = "10. Method/Function &Add"
+        '
+        'lbNumberTwo
+        '
+        Me.lbNumberTwo.Location = New System.Drawing.Point(13, 114)
+        Me.lbNumberTwo.Name = "lbNumberTwo"
+        Me.lbNumberTwo.Size = New System.Drawing.Size(57, 13)
+        Me.lbNumberTwo.TabIndex = 5
+        Me.lbNumberTwo.Text = "Enter #2:"
+        '
+        'tbNumberTwo
+        '
+        Me.tbNumberTwo.Location = New System.Drawing.Point(75, 114)
+        Me.tbNumberTwo.Name = "tbNumberTwo"
+        Me.tbNumberTwo.Size = New System.Drawing.Size(100, 20)
+        Me.tbNumberTwo.TabIndex = 6
+        Me.tbNumberTwo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lbAddFunctionDescription
+        '
+        Me.lbAddFunctionDescription.Location = New System.Drawing.Point(12, 18)
+        Me.lbAddFunctionDescription.Name = "lbAddFunctionDescription"
+        Me.lbAddFunctionDescription.Size = New System.Drawing.Size(163, 74)
+        Me.lbAddFunctionDescription.TabIndex = 0
+        Me.lbAddFunctionDescription.Text = "Enter a number in each box and click Enter. This will add the two numbers togethe" &
+    "r. This has no validation, so you must enter two numbers."
+        '
+        'lbAddDemoOutput
+        '
+        Me.lbAddDemoOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbAddDemoOutput.Location = New System.Drawing.Point(16, 146)
+        Me.lbAddDemoOutput.Name = "lbAddDemoOutput"
+        Me.lbAddDemoOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbAddDemoOutput.TabIndex = 3
+        '
+        'lbNumberOne
+        '
+        Me.lbNumberOne.Location = New System.Drawing.Point(13, 92)
+        Me.lbNumberOne.Name = "lbNumberOne"
+        Me.lbNumberOne.Size = New System.Drawing.Size(56, 13)
+        Me.lbNumberOne.TabIndex = 1
+        Me.lbNumberOne.Text = "Enter #1:"
+        '
+        'tbNumberOne
+        '
+        Me.tbNumberOne.Location = New System.Drawing.Point(75, 92)
+        Me.tbNumberOne.Name = "tbNumberOne"
+        Me.tbNumberOne.Size = New System.Drawing.Size(100, 20)
+        Me.tbNumberOne.TabIndex = 2
+        Me.tbNumberOne.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'btnAddDemo
+        '
+        Me.btnAddDemo.Location = New System.Drawing.Point(101, 210)
+        Me.btnAddDemo.Name = "btnAddDemo"
+        Me.btnAddDemo.Size = New System.Drawing.Size(75, 23)
+        Me.btnAddDemo.TabIndex = 4
+        Me.btnAddDemo.Text = "&Enter"
+        Me.btnAddDemo.UseVisualStyleBackColor = True
+        '
         'frmDemoIfLoopArray
         '
         Me.AcceptButton = Me.btnIfDemo
@@ -736,6 +819,7 @@ Partial Class frmDemoIfLoopArray
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnReset
         Me.ClientSize = New System.Drawing.Size(794, 676)
+        Me.Controls.Add(Me.grpMethodAdd)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.grpReset)
         Me.Controls.Add(Me.grpMethodDemo)
@@ -772,6 +856,8 @@ Partial Class frmDemoIfLoopArray
         Me.grpMethodDemo.ResumeLayout(False)
         Me.grpMethodDemo.PerformLayout()
         Me.grpReset.ResumeLayout(False)
+        Me.grpMethodAdd.ResumeLayout(False)
+        Me.grpMethodAdd.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -826,7 +912,7 @@ Partial Class frmDemoIfLoopArray
     Friend WithEvents tbDoWhileLoopBreakDemoInput As TextBox
     Friend WithEvents btnDoWhileLoopBreakDemo As Button
     Friend WithEvents grpCreateArray As GroupBox
-    Friend WithEvents lbCreateArrayDesciption As Label
+    Friend WithEvents lbCreateArrayDescription As Label
     Friend WithEvents lbCreateArrayOutput As Label
     Friend WithEvents lbCreateArrayInput As Label
     Friend WithEvents tbCreateArrayInput As TextBox
@@ -841,4 +927,12 @@ Partial Class frmDemoIfLoopArray
     Friend WithEvents lblReset As Label
     Friend WithEvents btnReset As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents grpMethodAdd As GroupBox
+    Friend WithEvents lbAddFunctionDescription As Label
+    Friend WithEvents lbAddDemoOutput As Label
+    Friend WithEvents lbNumberOne As Label
+    Friend WithEvents tbNumberOne As TextBox
+    Friend WithEvents btnAddDemo As Button
+    Friend WithEvents lbNumberTwo As Label
+    Friend WithEvents tbNumberTwo As TextBox
 End Class

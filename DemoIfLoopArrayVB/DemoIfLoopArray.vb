@@ -148,13 +148,15 @@ Public Class frmDemoIfLoopArray
                 ' loop starting at the number 1
                 ' until the counter has reached
                 ' the number the user has input
+                '      initializer;        condition;              iterat
                 For counter As Integer = 1 To userInputInteger ' initialize the variable and specifies the test
 
                     ' append number to the output
                     output += counter.ToString & " "
 
-                Next counter ' pseudo incrementer - even if the counter was not beside Next it would still increment
-
+                    ' 1 2 3 4 5
+                Next counter 'pseudo incrementer - even If the counter was Not beside Next it would still increment
+                ' iterator
 
             Else
 
@@ -660,6 +662,100 @@ Public Class frmDemoIfLoopArray
 
 #End Region
 
+#Region "Add Method/Function Demo"
+
+    ''' <summary>
+    ''' btnAddDemo_Click - event that fires when the btnAddDemo is click and demonstrates a method function by calling a simple add method/function.
+    ''' </summary>
+    ''' <param name="sender">Object</param>
+    ''' <param name="e">EventArgs</param>
+    Private Sub btnAddDemo_Click(sender As Object, e As EventArgs) Handles btnAddDemo.Click
+
+        Dim inputNumberOneString As String = String.Empty   ' holds the string assigned from text box one
+        Dim inputNumberTwoString As String = String.Empty   ' holds the string assigned from text box two
+        Dim inputNumberOne As Double = 0.0                  ' holds the double converted and assigned from input number one string.
+        Dim inputNumberTwo As Double = 0.0                  ' holds the double converted and assigned from input number two string.
+        Dim summedNumber As Double = 0.0                    ' holds the double assigned from Add function.
+
+        ' get the input from the textboxes
+        inputNumberOneString = tbNumberOne.Text     ' get the string input from text box one
+        inputNumberTwoString = tbNumberTwo.Text     ' get the string input from text box two
+
+        ' convert the string input to doubles
+        ' ( I'm not validating to see if the strings are doubles, so the code is much simpler. The concept to be learned here is how to create and call a method/function)
+        inputNumberOne = Convert.ToDouble(inputNumberOneString) ' convert the 1st number string to a double and assign it to the input number one (double) variable
+        inputNumberTwo = Convert.ToDouble(inputNumberTwoString) ' convert the 2st number string to a double and assign it to the input number two (double) variable
+
+        ' call the Add method/function and pass it the two double variables
+        ' the 1st argument passed is the input number one (double) variable
+        ' the 2nd argument passed is the input number two (double) variable.
+        ' The returned value of the function is assigned (=) to the summed number (double) variable
+        summedNumber = Add(inputNumberOne, inputNumberTwo)
+
+        ' display the the result to the user by
+        ' converting all three variable to strings
+        ' and contatenating them to show a simple 
+        ' addition math equation.
+        lbAddDemoOutput.Text = summedNumber.ToString("n2") & " = " & inputNumberOne.ToString("n2") & " + " & inputNumberTwo.ToString("n2")
+
+    End Sub
+
+    ''' <summary>
+    ''' Add - Adds two numbers
+    ''' </summary>
+    ''' <param name="numberOne">Double</param>
+    ''' <param name="numberTwo">Double</param>
+    ''' <returns>Double - the sum of the two arguments passed to the Method/Function</returns>
+    Private Function Add(numberOne As Double, numberTwo As Double) As Double
+
+        ' declare a variable to hold the return value that will be summed
+        ' based on the two
+        Dim returnSumNumber As Double = 0.0
+
+        ' add number one and number two and assign the
+        ' value to return sum mumber.
+        returnSumNumber = numberOne + numberTwo
+
+        ' return the value in return sum number
+        ' back to the code that called our Add
+        ' method
+        Return returnSumNumber
+
+    End Function
+
+
+    ''' <summary>
+    ''' Add - Adds any number of numbers, but the numbers must be passed in as a double array
+    ''' </summary>
+    ''' <param name="numbers">Double()</param>
+    ''' <returns>Double - the sum of the array argument passed to the Method/Function</returns>
+    Private Function Add(numbers As Double()) As Double
+
+        ' declare a variable to hold the return value that will be summed
+        ' based on the summed numbers in the array
+        Dim returnSummedNumber As Double = 0.0
+
+
+        ' loop the array And continually add
+        ' the current element to the summed number to be returned
+        For index As Integer = 0 To numbers.Length - 1
+
+            ' add the current numbers element to
+            ' the summed number to be returned
+            returnSummedNumber += numbers(index)
+
+        Next index
+
+        ' return the value in return sum number
+        ' back to the code that called our Add
+        ' method
+        Return returnSummedNumber
+
+    End Function
+
+#End Region
+
+
 #Region "Method Demo"
 
     ''' <summary>
@@ -941,7 +1037,9 @@ Public Class frmDemoIfLoopArray
                                                                         tbDoWhileLoopDemoInput.GotFocus,
                                                                         tbDoWhileLoopBreakDemoInput.GotFocus,
                                                                         tbCreateArrayInput.GotFocus,
-                                                                        tbMethodInput.GotFocus
+                                                                        tbMethodInput.GotFocus,
+                                                                        tbNumberOne.GotFocus,
+                                                                        tbNumberTwo.GotFocus
 
         ' set the control name
         Dim controlName As String = CType(sender, TextBox).Name
@@ -1007,6 +1105,13 @@ Public Class frmDemoIfLoopArray
             ' to the appropriate button
             Me.AcceptButton = btnMethodDemo
 
+        ElseIf controlName = "tbNumberOne" Or
+           controlName = "tbNumberOne" Then
+
+            ' set the accept button
+            ' to the appropriate button
+            Me.AcceptButton = btnAddDemo
+
         End If
 
     End Sub
@@ -1027,6 +1132,8 @@ Public Class frmDemoIfLoopArray
         Me.Close()
 
     End Sub
+
+
 #End Region
 
 End Class
