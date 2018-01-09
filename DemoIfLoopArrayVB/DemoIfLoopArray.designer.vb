@@ -369,7 +369,7 @@ Partial Class frmDemoIfLoopArray
         'lbCreateArrayOutput
         '
         Me.lbCreateArrayOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lbCreateArrayOutput.Location = New System.Drawing.Point(16, 145)
+        Me.lbCreateArrayOutput.Location = New System.Drawing.Point(16, 148)
         Me.lbCreateArrayOutput.Name = "lbCreateArrayOutput"
         Me.lbCreateArrayOutput.Size = New System.Drawing.Size(160, 61)
         Me.lbCreateArrayOutput.TabIndex = 3
@@ -704,7 +704,7 @@ Partial Class frmDemoIfLoopArray
         Me.grpReset.Controls.Add(Me.btnReset)
         Me.grpReset.Location = New System.Drawing.Point(600, 439)
         Me.grpReset.Name = "grpReset"
-        Me.grpReset.Size = New System.Drawing.Size(190, 237)
+        Me.grpReset.Size = New System.Drawing.Size(190, 186)
         Me.grpReset.TabIndex = 11
         Me.grpReset.TabStop = False
         Me.grpReset.Text = "12. Method/&Void Function"
@@ -734,7 +734,7 @@ Partial Class frmDemoIfLoopArray
         Me.btnExit.Location = New System.Drawing.Point(715, 652)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
-        Me.btnExit.TabIndex = 11
+        Me.btnExit.TabIndex = 12
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -759,7 +759,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbNumberTwo.Location = New System.Drawing.Point(13, 114)
         Me.lbNumberTwo.Name = "lbNumberTwo"
         Me.lbNumberTwo.Size = New System.Drawing.Size(57, 13)
-        Me.lbNumberTwo.TabIndex = 5
+        Me.lbNumberTwo.TabIndex = 3
         Me.lbNumberTwo.Text = "Enter #2:"
         '
         'tbNumberTwo
@@ -767,7 +767,7 @@ Partial Class frmDemoIfLoopArray
         Me.tbNumberTwo.Location = New System.Drawing.Point(75, 114)
         Me.tbNumberTwo.Name = "tbNumberTwo"
         Me.tbNumberTwo.Size = New System.Drawing.Size(100, 20)
-        Me.tbNumberTwo.TabIndex = 6
+        Me.tbNumberTwo.TabIndex = 4
         Me.tbNumberTwo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'lbAddFunctionDescription
@@ -785,7 +785,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbAddDemoOutput.Location = New System.Drawing.Point(16, 146)
         Me.lbAddDemoOutput.Name = "lbAddDemoOutput"
         Me.lbAddDemoOutput.Size = New System.Drawing.Size(160, 61)
-        Me.lbAddDemoOutput.TabIndex = 3
+        Me.lbAddDemoOutput.TabIndex = 5
         '
         'lbNumberOne
         '
@@ -808,7 +808,7 @@ Partial Class frmDemoIfLoopArray
         Me.btnAddDemo.Location = New System.Drawing.Point(101, 210)
         Me.btnAddDemo.Name = "btnAddDemo"
         Me.btnAddDemo.Size = New System.Drawing.Size(75, 23)
-        Me.btnAddDemo.TabIndex = 4
+        Me.btnAddDemo.TabIndex = 6
         Me.btnAddDemo.Text = "&Enter"
         Me.btnAddDemo.UseVisualStyleBackColor = True
         '
