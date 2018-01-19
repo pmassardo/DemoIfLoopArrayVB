@@ -3,9 +3,9 @@ Option Strict On
 
 ''' <summary>
 ''' Author: Alfred Massardo
-''' Project Name: DemoIfLoopArrayCS
+''' Project Name: DemoIfLoopArrayVB
 ''' Date: 01-Jan-2018
-''' Description: Application to demonstrate various c# constructs.
+''' Description: Application to demonstrate various VB constructs.
 ''' </summary>
 
 Public Class frmDemoIfLoopArray
