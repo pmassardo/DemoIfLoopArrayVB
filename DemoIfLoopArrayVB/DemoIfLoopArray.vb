@@ -1,4 +1,13 @@
-﻿Option Strict On
+﻿
+Option Strict On
+
+''' <summary>
+''' Author: Alfred Massardo
+''' Project Name: DemoIfLoopArrayCS
+''' Date: 01-Jan-2018
+''' Description: Application to demonstrate various c# constructs.
+''' </summary>
+
 Public Class frmDemoIfLoopArray
 
 #Region "If"
@@ -206,7 +215,6 @@ Public Class frmDemoIfLoopArray
 
             If (Integer.TryParse(userInput, userInputInteger)) Then ' If the input is an Integer
 
-
                 ' processing
 
                 ' Enter a break point on For counter As Integer = 1 To userInputInteger and you can 
@@ -221,7 +229,7 @@ Public Class frmDemoIfLoopArray
                 For counter As Integer = 1 To loopLimit ' initialize the variable and specifies the test
 
                     ' append number to the output
-                    output += counter.ToString & " "
+                    output += counter.ToString & " " ' & vbCrLf
 
                     ' Check if the counter has reached 
                     ' the user input
@@ -635,7 +643,7 @@ Public Class frmDemoIfLoopArray
                 For index As Integer = 0 To demoArray.Length - 1 ' initialize the variable and specifies the test
 
                     ' append number to the output
-                    output += demoArray(index).ToString() & " "
+                    output += demoArray(index).ToString() & " " ' & vbCrLf
 
                 Next index ' pseudo incrementer - even if the index was not beside Next it would still increment
 
@@ -707,6 +715,9 @@ Public Class frmDemoIfLoopArray
     ''' <param name="numberTwo">Double</param>
     ''' <returns>Double - the sum of the two arguments passed to the Method/Function</returns>
     Private Function Add(numberOne As Double, numberTwo As Double) As Double
+        ' Modifiers Function FunctionName(Parameters) Return DataType
+
+        ' Statements - start
 
         ' declare a variable to hold the return value that will be summed
         ' based on the two
@@ -721,8 +732,9 @@ Public Class frmDemoIfLoopArray
         ' method
         Return returnSumNumber
 
-    End Function
+        ' Statements - end
 
+    End Function
 
     ''' <summary>
     ''' Add - Adds any number of numbers, but the numbers must be passed in as a double array
@@ -754,7 +766,6 @@ Public Class frmDemoIfLoopArray
     End Function
 
 #End Region
-
 
 #Region "Method Demo"
 
