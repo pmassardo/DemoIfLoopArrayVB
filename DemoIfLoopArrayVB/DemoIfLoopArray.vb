@@ -713,7 +713,7 @@ Public Class frmDemoIfLoopArray
 
     ''' <summary>
     ''' Add - Adds two numbers
-    '''     *** Functions can be called by another procedure and returns a value to the calling code. 
+    '''     *** Function is a self contained area of code that contains one or more lines of code that can be called by another procedure and returns a value to the calling code. 
     ''' </summary>
     ''' <param name="numberOne">Double</param>
     ''' <param name="numberTwo">Double</param>
@@ -997,7 +997,7 @@ Public Class frmDemoIfLoopArray
     ''' Private function that loops through the form And
     ''' determines if the control should be cleared. If so,
     ''' the control Is cleared.
-    '''     *** Sub can be called by another procedure but does not return anything to the calling code. 
+    '''     *** Sub is a self contained area of code that contains one or more lines of code that can be called by another procedure but does **not** return anything to the calling code. 
     ''' </summary>
     Private Sub resetForm()
         ' Modifiers / Sub / SubName / (Parameters) / No Return DataType
