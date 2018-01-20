@@ -713,6 +713,7 @@ Public Class frmDemoIfLoopArray
 
     ''' <summary>
     ''' Add - Adds two numbers
+    '''     *** Functions can be called by another procedure and returns a value to the calling code. 
     ''' </summary>
     ''' <param name="numberOne">Double</param>
     ''' <param name="numberTwo">Double</param>
@@ -781,7 +782,7 @@ Public Class frmDemoIfLoopArray
 
 #End Region
 
-#Region "Method Demo"
+#Region "Method Demo/Advanced"
 
     ''' <summary>
     ''' Enter a number and click Enter. 
@@ -980,7 +981,7 @@ Public Class frmDemoIfLoopArray
 
 #End Region
 
-#Region "Reset Form"
+#Region "Reset Form/Sub Demo"
 
     ''' <summary>
     ''' The Click event of the reset button Is fired when the
@@ -996,8 +997,22 @@ Public Class frmDemoIfLoopArray
     ''' Private function that loops through the form And
     ''' determines if the control should be cleared. If so,
     ''' the control Is cleared.
+    '''     *** Sub can be called by another procedure but does not return anything to the calling code. 
     ''' </summary>
     Private Sub resetForm()
+        ' Modifiers / Sub / SubName / (Parameters) / No Return DataType
+
+        ' --------------------------------- Access Modifiers -------------------------------
+        'Public             - No access restrictions. Access Is available To other projects, applications, etc. 
+        '                       (Public should be your last consideration When deciding on an access modifier.)
+        'Protected          - Access limited to containing And inherited classes. Inheritance will be covered fully in NETD II
+        'Private            - Access limited To containing Class, module or structure.
+        '                       (Private should be your first consideration When deciding on an access modifier.)
+        'Friend             - Access limited to the current project.
+        'Protected Friend   - Access limited to containing And inherited classes And the current project.
+        'https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/declared-elements/access-levels
+        ' ----------------------------------------------------------------------------------
+
 
         ' declare a group box as 
         ' all other controls are
