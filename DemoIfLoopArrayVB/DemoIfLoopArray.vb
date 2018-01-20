@@ -617,7 +617,6 @@ Public Class frmDemoIfLoopArray
                 ' 11 elements, 0 - 10 inclusive.
                 demoArray = New Integer(userInputInteger - 1) {}
 
-
                 ' Enter a break point on For counter As Integer = 1 To userInputInteger and you can 
                 ' watch the execution of the code from start to finish
                 ' press...
@@ -644,7 +643,11 @@ Public Class frmDemoIfLoopArray
 
                     ' append number to the output
                     output += demoArray(index).ToString() & " " ' & vbCrLf
-
+                    ' 2 4 6 8 10 12...
+                    ' 2
+                    ' 4
+                    ' 6
+                    ' ...
                 Next index ' pseudo incrementer - even if the index was not beside Next it would still increment
 
             Else
@@ -715,7 +718,18 @@ Public Class frmDemoIfLoopArray
     ''' <param name="numberTwo">Double</param>
     ''' <returns>Double - the sum of the two arguments passed to the Method/Function</returns>
     Private Function Add(numberOne As Double, numberTwo As Double) As Double
-        ' Modifiers Function FunctionName(Parameters) Return DataType
+        ' Modifiers / Function / FunctionName / (Parameters) / Return DataType
+
+        ' --------------------------------- Access Modifiers -------------------------------
+        'Public             - No access restrictions. Access Is available To other projects, applications, etc. 
+        '                       (Public should be your last consideration When deciding on an access modifier.)
+        'Protected          - Access limited to containing And inherited classes. Inheritance will be covered fully in NETD II
+        'Private            - Access limited To containing Class, module or structure.
+        '                       (Private should be your first consideration When deciding on an access modifier.)
+        'Friend             - Access limited to the current project.
+        'Protected Friend   - Access limited to containing And inherited classes And the current project.
+        'https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/declared-elements/access-levels
+        ' ----------------------------------------------------------------------------------
 
         ' Statements - start
 
