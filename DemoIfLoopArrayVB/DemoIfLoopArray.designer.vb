@@ -97,6 +97,12 @@ Partial Class frmDemoIfLoopArray
         Me.lbNumberOne = New System.Windows.Forms.Label()
         Me.tbNumberOne = New System.Windows.Forms.TextBox()
         Me.btnAddDemo = New System.Windows.Forms.Button()
+        Me.grpSelectCase = New System.Windows.Forms.GroupBox()
+        Me.lblSelectCaseDescription = New System.Windows.Forms.Label()
+        Me.lbSelectCaseOutput = New System.Windows.Forms.Label()
+        Me.lbSelectCase = New System.Windows.Forms.Label()
+        Me.tbSelectCase = New System.Windows.Forms.TextBox()
+        Me.btnSelectCase = New System.Windows.Forms.Button()
         Me.grpIf.SuspendLayout()
         Me.grpNestedIf.SuspendLayout()
         Me.grpForLoop.SuspendLayout()
@@ -109,6 +115,7 @@ Partial Class frmDemoIfLoopArray
         Me.grpMethodDemo.SuspendLayout()
         Me.grpReset.SuspendLayout()
         Me.grpMethodAdd.SuspendLayout()
+        Me.grpSelectCase.SuspendLayout()
         Me.SuspendLayout()
         '
         'grpIf
@@ -118,9 +125,9 @@ Partial Class frmDemoIfLoopArray
         Me.grpIf.Controls.Add(Me.lbIfInput)
         Me.grpIf.Controls.Add(Me.tbIfInput)
         Me.grpIf.Controls.Add(Me.btnIfDemo)
-        Me.grpIf.Location = New System.Drawing.Point(12, 12)
+        Me.grpIf.Location = New System.Drawing.Point(12, 1)
         Me.grpIf.Name = "grpIf"
-        Me.grpIf.Size = New System.Drawing.Size(190, 211)
+        Me.grpIf.Size = New System.Drawing.Size(190, 195)
         Me.grpIf.TabIndex = 0
         Me.grpIf.TabStop = False
         Me.grpIf.Text = "&1. If Demo"
@@ -139,7 +146,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbIfOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbIfOutput.Location = New System.Drawing.Point(15, 118)
         Me.lbIfOutput.Name = "lbIfOutput"
-        Me.lbIfOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbIfOutput.Size = New System.Drawing.Size(160, 46)
         Me.lbIfOutput.TabIndex = 3
         Me.DemoTip.SetToolTip(Me.lbIfOutput, "Resul/Output will display here.")
         '
@@ -162,7 +169,7 @@ Partial Class frmDemoIfLoopArray
         '
         'btnIfDemo
         '
-        Me.btnIfDemo.Location = New System.Drawing.Point(100, 182)
+        Me.btnIfDemo.Location = New System.Drawing.Point(100, 167)
         Me.btnIfDemo.Name = "btnIfDemo"
         Me.btnIfDemo.Size = New System.Drawing.Size(75, 23)
         Me.btnIfDemo.TabIndex = 4
@@ -175,7 +182,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbNestedIfOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbNestedIfOutput.Location = New System.Drawing.Point(15, 118)
         Me.lbNestedIfOutput.Name = "lbNestedIfOutput"
-        Me.lbNestedIfOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbNestedIfOutput.Size = New System.Drawing.Size(160, 46)
         Me.lbNestedIfOutput.TabIndex = 3
         Me.DemoTip.SetToolTip(Me.lbNestedIfOutput, "Resul/Output will display here.")
         '
@@ -190,7 +197,7 @@ Partial Class frmDemoIfLoopArray
         '
         'btnNestedIfDemo
         '
-        Me.btnNestedIfDemo.Location = New System.Drawing.Point(100, 182)
+        Me.btnNestedIfDemo.Location = New System.Drawing.Point(100, 167)
         Me.btnNestedIfDemo.Name = "btnNestedIfDemo"
         Me.btnNestedIfDemo.Size = New System.Drawing.Size(75, 23)
         Me.btnNestedIfDemo.TabIndex = 4
@@ -203,7 +210,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbForLoopDemoOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbForLoopDemoOutput.Location = New System.Drawing.Point(15, 118)
         Me.lbForLoopDemoOutput.Name = "lbForLoopDemoOutput"
-        Me.lbForLoopDemoOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbForLoopDemoOutput.Size = New System.Drawing.Size(160, 46)
         Me.lbForLoopDemoOutput.TabIndex = 3
         Me.DemoTip.SetToolTip(Me.lbForLoopDemoOutput, "Resul/Output will display here.")
         '
@@ -218,7 +225,7 @@ Partial Class frmDemoIfLoopArray
         '
         'btnForLoopDemo
         '
-        Me.btnForLoopDemo.Location = New System.Drawing.Point(100, 182)
+        Me.btnForLoopDemo.Location = New System.Drawing.Point(100, 167)
         Me.btnForLoopDemo.Name = "btnForLoopDemo"
         Me.btnForLoopDemo.Size = New System.Drawing.Size(75, 23)
         Me.btnForLoopDemo.TabIndex = 4
@@ -231,7 +238,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbForLoopBreakDemoOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbForLoopBreakDemoOutput.Location = New System.Drawing.Point(15, 118)
         Me.lbForLoopBreakDemoOutput.Name = "lbForLoopBreakDemoOutput"
-        Me.lbForLoopBreakDemoOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbForLoopBreakDemoOutput.Size = New System.Drawing.Size(160, 46)
         Me.lbForLoopBreakDemoOutput.TabIndex = 3
         Me.DemoTip.SetToolTip(Me.lbForLoopBreakDemoOutput, "Resul/Output will display here.")
         '
@@ -246,7 +253,7 @@ Partial Class frmDemoIfLoopArray
         '
         'btnForLoopBreakDemo
         '
-        Me.btnForLoopBreakDemo.Location = New System.Drawing.Point(100, 182)
+        Me.btnForLoopBreakDemo.Location = New System.Drawing.Point(100, 167)
         Me.btnForLoopBreakDemo.Name = "btnForLoopBreakDemo"
         Me.btnForLoopBreakDemo.Size = New System.Drawing.Size(75, 23)
         Me.btnForLoopBreakDemo.TabIndex = 4
@@ -259,7 +266,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbWhileLoopDemoOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbWhileLoopDemoOutput.Location = New System.Drawing.Point(15, 118)
         Me.lbWhileLoopDemoOutput.Name = "lbWhileLoopDemoOutput"
-        Me.lbWhileLoopDemoOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbWhileLoopDemoOutput.Size = New System.Drawing.Size(160, 46)
         Me.lbWhileLoopDemoOutput.TabIndex = 3
         Me.DemoTip.SetToolTip(Me.lbWhileLoopDemoOutput, "Resul/Output will display here.")
         '
@@ -274,7 +281,7 @@ Partial Class frmDemoIfLoopArray
         '
         'btnWhileLoopDemo
         '
-        Me.btnWhileLoopDemo.Location = New System.Drawing.Point(100, 182)
+        Me.btnWhileLoopDemo.Location = New System.Drawing.Point(101, 167)
         Me.btnWhileLoopDemo.Name = "btnWhileLoopDemo"
         Me.btnWhileLoopDemo.Size = New System.Drawing.Size(75, 23)
         Me.btnWhileLoopDemo.TabIndex = 4
@@ -287,7 +294,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbWhileLoopBreakDemoOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbWhileLoopBreakDemoOutput.Location = New System.Drawing.Point(15, 118)
         Me.lbWhileLoopBreakDemoOutput.Name = "lbWhileLoopBreakDemoOutput"
-        Me.lbWhileLoopBreakDemoOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbWhileLoopBreakDemoOutput.Size = New System.Drawing.Size(160, 46)
         Me.lbWhileLoopBreakDemoOutput.TabIndex = 3
         Me.DemoTip.SetToolTip(Me.lbWhileLoopBreakDemoOutput, "Resul/Output will display here.")
         '
@@ -302,7 +309,7 @@ Partial Class frmDemoIfLoopArray
         '
         'btnWhileLoopBreakDemo
         '
-        Me.btnWhileLoopBreakDemo.Location = New System.Drawing.Point(100, 182)
+        Me.btnWhileLoopBreakDemo.Location = New System.Drawing.Point(100, 167)
         Me.btnWhileLoopBreakDemo.Name = "btnWhileLoopBreakDemo"
         Me.btnWhileLoopBreakDemo.Size = New System.Drawing.Size(75, 23)
         Me.btnWhileLoopBreakDemo.TabIndex = 4
@@ -315,7 +322,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbDoWhileLoopDemoOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbDoWhileLoopDemoOutput.Location = New System.Drawing.Point(15, 118)
         Me.lbDoWhileLoopDemoOutput.Name = "lbDoWhileLoopDemoOutput"
-        Me.lbDoWhileLoopDemoOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbDoWhileLoopDemoOutput.Size = New System.Drawing.Size(160, 46)
         Me.lbDoWhileLoopDemoOutput.TabIndex = 3
         Me.DemoTip.SetToolTip(Me.lbDoWhileLoopDemoOutput, "Resul/Output will display here.")
         '
@@ -330,7 +337,7 @@ Partial Class frmDemoIfLoopArray
         '
         'btnDoWhileLoopDemo
         '
-        Me.btnDoWhileLoopDemo.Location = New System.Drawing.Point(100, 182)
+        Me.btnDoWhileLoopDemo.Location = New System.Drawing.Point(100, 167)
         Me.btnDoWhileLoopDemo.Name = "btnDoWhileLoopDemo"
         Me.btnDoWhileLoopDemo.Size = New System.Drawing.Size(75, 23)
         Me.btnDoWhileLoopDemo.TabIndex = 4
@@ -343,7 +350,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbDoWhileLoopBreakDemoOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbDoWhileLoopBreakDemoOutput.Location = New System.Drawing.Point(15, 118)
         Me.lbDoWhileLoopBreakDemoOutput.Name = "lbDoWhileLoopBreakDemoOutput"
-        Me.lbDoWhileLoopBreakDemoOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbDoWhileLoopBreakDemoOutput.Size = New System.Drawing.Size(160, 46)
         Me.lbDoWhileLoopBreakDemoOutput.TabIndex = 3
         Me.DemoTip.SetToolTip(Me.lbDoWhileLoopBreakDemoOutput, "Result/Output will display here.")
         '
@@ -358,7 +365,7 @@ Partial Class frmDemoIfLoopArray
         '
         'btnDoWhileLoopBreakDemo
         '
-        Me.btnDoWhileLoopBreakDemo.Location = New System.Drawing.Point(100, 182)
+        Me.btnDoWhileLoopBreakDemo.Location = New System.Drawing.Point(100, 168)
         Me.btnDoWhileLoopBreakDemo.Name = "btnDoWhileLoopBreakDemo"
         Me.btnDoWhileLoopBreakDemo.Size = New System.Drawing.Size(75, 23)
         Me.btnDoWhileLoopBreakDemo.TabIndex = 4
@@ -371,7 +378,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbCreateArrayOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbCreateArrayOutput.Location = New System.Drawing.Point(16, 148)
         Me.lbCreateArrayOutput.Name = "lbCreateArrayOutput"
-        Me.lbCreateArrayOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbCreateArrayOutput.Size = New System.Drawing.Size(160, 46)
         Me.lbCreateArrayOutput.TabIndex = 3
         Me.DemoTip.SetToolTip(Me.lbCreateArrayOutput, "Resul/Output will display here.")
         '
@@ -386,7 +393,7 @@ Partial Class frmDemoIfLoopArray
         '
         'btnCreateArrayDemo
         '
-        Me.btnCreateArrayDemo.Location = New System.Drawing.Point(101, 209)
+        Me.btnCreateArrayDemo.Location = New System.Drawing.Point(101, 195)
         Me.btnCreateArrayDemo.Name = "btnCreateArrayDemo"
         Me.btnCreateArrayDemo.Size = New System.Drawing.Size(75, 23)
         Me.btnCreateArrayDemo.TabIndex = 4
@@ -401,9 +408,9 @@ Partial Class frmDemoIfLoopArray
         Me.grpNestedIf.Controls.Add(Me.lbNestedIfInput)
         Me.grpNestedIf.Controls.Add(Me.tbNestedIfInput)
         Me.grpNestedIf.Controls.Add(Me.btnNestedIfDemo)
-        Me.grpNestedIf.Location = New System.Drawing.Point(206, 12)
+        Me.grpNestedIf.Location = New System.Drawing.Point(206, 1)
         Me.grpNestedIf.Name = "grpNestedIf"
-        Me.grpNestedIf.Size = New System.Drawing.Size(190, 211)
+        Me.grpNestedIf.Size = New System.Drawing.Size(190, 195)
         Me.grpNestedIf.TabIndex = 1
         Me.grpNestedIf.TabStop = False
         Me.grpNestedIf.Text = "&2. Nested If Demo"
@@ -432,9 +439,9 @@ Partial Class frmDemoIfLoopArray
         Me.grpForLoop.Controls.Add(Me.lbForLoopDemoInput)
         Me.grpForLoop.Controls.Add(Me.tbForLoopDemoInput)
         Me.grpForLoop.Controls.Add(Me.btnForLoopDemo)
-        Me.grpForLoop.Location = New System.Drawing.Point(404, 12)
+        Me.grpForLoop.Location = New System.Drawing.Point(404, 1)
         Me.grpForLoop.Name = "grpForLoop"
-        Me.grpForLoop.Size = New System.Drawing.Size(190, 211)
+        Me.grpForLoop.Size = New System.Drawing.Size(190, 195)
         Me.grpForLoop.TabIndex = 2
         Me.grpForLoop.TabStop = False
         Me.grpForLoop.Text = "&3.  For Loop"
@@ -463,9 +470,9 @@ Partial Class frmDemoIfLoopArray
         Me.grpForLoopBreak.Controls.Add(Me.lbForLoopBreakDemoInput)
         Me.grpForLoopBreak.Controls.Add(Me.tbForLoopBreakDemoInput)
         Me.grpForLoopBreak.Controls.Add(Me.btnForLoopBreakDemo)
-        Me.grpForLoopBreak.Location = New System.Drawing.Point(600, 12)
+        Me.grpForLoopBreak.Location = New System.Drawing.Point(600, 1)
         Me.grpForLoopBreak.Name = "grpForLoopBreak"
-        Me.grpForLoopBreak.Size = New System.Drawing.Size(190, 211)
+        Me.grpForLoopBreak.Size = New System.Drawing.Size(190, 195)
         Me.grpForLoopBreak.TabIndex = 3
         Me.grpForLoopBreak.TabStop = False
         Me.grpForLoopBreak.Text = "&4. For Loop Elegant Break"
@@ -494,9 +501,9 @@ Partial Class frmDemoIfLoopArray
         Me.grpWhileLoop.Controls.Add(Me.lbWhileLoopDemoInput)
         Me.grpWhileLoop.Controls.Add(Me.tbWhileLoopDemoInput)
         Me.grpWhileLoop.Controls.Add(Me.btnWhileLoopDemo)
-        Me.grpWhileLoop.Location = New System.Drawing.Point(12, 223)
+        Me.grpWhileLoop.Location = New System.Drawing.Point(12, 196)
         Me.grpWhileLoop.Name = "grpWhileLoop"
-        Me.grpWhileLoop.Size = New System.Drawing.Size(190, 211)
+        Me.grpWhileLoop.Size = New System.Drawing.Size(190, 195)
         Me.grpWhileLoop.TabIndex = 4
         Me.grpWhileLoop.TabStop = False
         Me.grpWhileLoop.Text = "&5. While Loop"
@@ -525,9 +532,9 @@ Partial Class frmDemoIfLoopArray
         Me.grpWhileLoopBreak.Controls.Add(Me.lbWhileLoopBreakDemoInput)
         Me.grpWhileLoopBreak.Controls.Add(Me.tbWhileLoopBreakDemoInput)
         Me.grpWhileLoopBreak.Controls.Add(Me.btnWhileLoopBreakDemo)
-        Me.grpWhileLoopBreak.Location = New System.Drawing.Point(208, 223)
+        Me.grpWhileLoopBreak.Location = New System.Drawing.Point(208, 197)
         Me.grpWhileLoopBreak.Name = "grpWhileLoopBreak"
-        Me.grpWhileLoopBreak.Size = New System.Drawing.Size(190, 211)
+        Me.grpWhileLoopBreak.Size = New System.Drawing.Size(190, 195)
         Me.grpWhileLoopBreak.TabIndex = 5
         Me.grpWhileLoopBreak.TabStop = False
         Me.grpWhileLoopBreak.Text = "&6. While Loop Elegant Break"
@@ -556,9 +563,9 @@ Partial Class frmDemoIfLoopArray
         Me.grpDoWhileLoop.Controls.Add(Me.lbDoWhileLoopDemoInput)
         Me.grpDoWhileLoop.Controls.Add(Me.tbDoWhileLoopDemoInput)
         Me.grpDoWhileLoop.Controls.Add(Me.btnDoWhileLoopDemo)
-        Me.grpDoWhileLoop.Location = New System.Drawing.Point(404, 223)
+        Me.grpDoWhileLoop.Location = New System.Drawing.Point(404, 197)
         Me.grpDoWhileLoop.Name = "grpDoWhileLoop"
-        Me.grpDoWhileLoop.Size = New System.Drawing.Size(190, 211)
+        Me.grpDoWhileLoop.Size = New System.Drawing.Size(190, 195)
         Me.grpDoWhileLoop.TabIndex = 6
         Me.grpDoWhileLoop.TabStop = False
         Me.grpDoWhileLoop.Text = "&7. Do While Loop"
@@ -587,9 +594,9 @@ Partial Class frmDemoIfLoopArray
         Me.grpDoWhileLoopBreak.Controls.Add(Me.lbDoWhileLoopBreakDemoInput)
         Me.grpDoWhileLoopBreak.Controls.Add(Me.tbDoWhileLoopBreakDemoInput)
         Me.grpDoWhileLoopBreak.Controls.Add(Me.btnDoWhileLoopBreakDemo)
-        Me.grpDoWhileLoopBreak.Location = New System.Drawing.Point(600, 222)
+        Me.grpDoWhileLoopBreak.Location = New System.Drawing.Point(600, 196)
         Me.grpDoWhileLoopBreak.Name = "grpDoWhileLoopBreak"
-        Me.grpDoWhileLoopBreak.Size = New System.Drawing.Size(190, 211)
+        Me.grpDoWhileLoopBreak.Size = New System.Drawing.Size(190, 195)
         Me.grpDoWhileLoopBreak.TabIndex = 7
         Me.grpDoWhileLoopBreak.TabStop = False
         Me.grpDoWhileLoopBreak.Text = "&8. Do While Loop Elegant Break"
@@ -618,9 +625,9 @@ Partial Class frmDemoIfLoopArray
         Me.grpCreateArray.Controls.Add(Me.lbCreateArrayInput)
         Me.grpCreateArray.Controls.Add(Me.tbCreateArrayInput)
         Me.grpCreateArray.Controls.Add(Me.btnCreateArrayDemo)
-        Me.grpCreateArray.Location = New System.Drawing.Point(12, 438)
+        Me.grpCreateArray.Location = New System.Drawing.Point(12, 391)
         Me.grpCreateArray.Name = "grpCreateArray"
-        Me.grpCreateArray.Size = New System.Drawing.Size(190, 237)
+        Me.grpCreateArray.Size = New System.Drawing.Size(190, 222)
         Me.grpCreateArray.TabIndex = 8
         Me.grpCreateArray.TabStop = False
         Me.grpCreateArray.Text = "&9. Create Array"
@@ -650,9 +657,9 @@ Partial Class frmDemoIfLoopArray
         Me.grpMethodDemo.Controls.Add(Me.lbMethodInput)
         Me.grpMethodDemo.Controls.Add(Me.tbMethodInput)
         Me.grpMethodDemo.Controls.Add(Me.btnMethodDemo)
-        Me.grpMethodDemo.Location = New System.Drawing.Point(404, 440)
+        Me.grpMethodDemo.Location = New System.Drawing.Point(404, 391)
         Me.grpMethodDemo.Name = "grpMethodDemo"
-        Me.grpMethodDemo.Size = New System.Drawing.Size(190, 237)
+        Me.grpMethodDemo.Size = New System.Drawing.Size(190, 222)
         Me.grpMethodDemo.TabIndex = 10
         Me.grpMethodDemo.TabStop = False
         Me.grpMethodDemo.Text = "11. Method/&Function"
@@ -670,7 +677,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbMethodOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbMethodOutput.Location = New System.Drawing.Point(16, 146)
         Me.lbMethodOutput.Name = "lbMethodOutput"
-        Me.lbMethodOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbMethodOutput.Size = New System.Drawing.Size(160, 46)
         Me.lbMethodOutput.TabIndex = 3
         '
         'lbMethodInput
@@ -691,7 +698,7 @@ Partial Class frmDemoIfLoopArray
         '
         'btnMethodDemo
         '
-        Me.btnMethodDemo.Location = New System.Drawing.Point(101, 210)
+        Me.btnMethodDemo.Location = New System.Drawing.Point(101, 195)
         Me.btnMethodDemo.Name = "btnMethodDemo"
         Me.btnMethodDemo.Size = New System.Drawing.Size(75, 23)
         Me.btnMethodDemo.TabIndex = 4
@@ -702,9 +709,9 @@ Partial Class frmDemoIfLoopArray
         '
         Me.grpReset.Controls.Add(Me.lblReset)
         Me.grpReset.Controls.Add(Me.btnReset)
-        Me.grpReset.Location = New System.Drawing.Point(600, 439)
+        Me.grpReset.Location = New System.Drawing.Point(600, 390)
         Me.grpReset.Name = "grpReset"
-        Me.grpReset.Size = New System.Drawing.Size(190, 186)
+        Me.grpReset.Size = New System.Drawing.Size(190, 222)
         Me.grpReset.TabIndex = 11
         Me.grpReset.TabStop = False
         Me.grpReset.Text = "12. Method/&Void Function"
@@ -731,10 +738,10 @@ Partial Class frmDemoIfLoopArray
         'btnExit
         '
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnExit.Location = New System.Drawing.Point(715, 652)
+        Me.btnExit.Location = New System.Drawing.Point(715, 766)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
-        Me.btnExit.TabIndex = 12
+        Me.btnExit.TabIndex = 13
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -747,9 +754,9 @@ Partial Class frmDemoIfLoopArray
         Me.grpMethodAdd.Controls.Add(Me.lbNumberOne)
         Me.grpMethodAdd.Controls.Add(Me.tbNumberOne)
         Me.grpMethodAdd.Controls.Add(Me.btnAddDemo)
-        Me.grpMethodAdd.Location = New System.Drawing.Point(208, 440)
+        Me.grpMethodAdd.Location = New System.Drawing.Point(208, 391)
         Me.grpMethodAdd.Name = "grpMethodAdd"
-        Me.grpMethodAdd.Size = New System.Drawing.Size(190, 237)
+        Me.grpMethodAdd.Size = New System.Drawing.Size(190, 222)
         Me.grpMethodAdd.TabIndex = 9
         Me.grpMethodAdd.TabStop = False
         Me.grpMethodAdd.Text = "10. Method/Function &Add"
@@ -784,7 +791,7 @@ Partial Class frmDemoIfLoopArray
         Me.lbAddDemoOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lbAddDemoOutput.Location = New System.Drawing.Point(16, 146)
         Me.lbAddDemoOutput.Name = "lbAddDemoOutput"
-        Me.lbAddDemoOutput.Size = New System.Drawing.Size(160, 61)
+        Me.lbAddDemoOutput.Size = New System.Drawing.Size(160, 46)
         Me.lbAddDemoOutput.TabIndex = 5
         '
         'lbNumberOne
@@ -805,12 +812,68 @@ Partial Class frmDemoIfLoopArray
         '
         'btnAddDemo
         '
-        Me.btnAddDemo.Location = New System.Drawing.Point(101, 210)
+        Me.btnAddDemo.Location = New System.Drawing.Point(101, 195)
         Me.btnAddDemo.Name = "btnAddDemo"
         Me.btnAddDemo.Size = New System.Drawing.Size(75, 23)
         Me.btnAddDemo.TabIndex = 6
         Me.btnAddDemo.Text = "&Enter"
         Me.btnAddDemo.UseVisualStyleBackColor = True
+        '
+        'grpSelectCase
+        '
+        Me.grpSelectCase.Controls.Add(Me.lblSelectCaseDescription)
+        Me.grpSelectCase.Controls.Add(Me.lbSelectCaseOutput)
+        Me.grpSelectCase.Controls.Add(Me.lbSelectCase)
+        Me.grpSelectCase.Controls.Add(Me.tbSelectCase)
+        Me.grpSelectCase.Controls.Add(Me.btnSelectCase)
+        Me.grpSelectCase.Location = New System.Drawing.Point(12, 614)
+        Me.grpSelectCase.Name = "grpSelectCase"
+        Me.grpSelectCase.Size = New System.Drawing.Size(190, 175)
+        Me.grpSelectCase.TabIndex = 12
+        Me.grpSelectCase.TabStop = False
+        Me.grpSelectCase.Text = "13. Select Case"
+        '
+        'lblSelectCaseDescription
+        '
+        Me.lblSelectCaseDescription.Location = New System.Drawing.Point(12, 18)
+        Me.lblSelectCaseDescription.Name = "lblSelectCaseDescription"
+        Me.lblSelectCaseDescription.Size = New System.Drawing.Size(163, 53)
+        Me.lblSelectCaseDescription.TabIndex = 0
+        Me.lblSelectCaseDescription.Text = "Enter a grade letter (A,B,C,D,F)  and click Enter. A comment will be displayed ba" &
+    "sed on the letter entered. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'lbSelectCaseOutput
+        '
+        Me.lbSelectCaseOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbSelectCaseOutput.Location = New System.Drawing.Point(16, 101)
+        Me.lbSelectCaseOutput.Name = "lbSelectCaseOutput"
+        Me.lbSelectCaseOutput.Size = New System.Drawing.Size(160, 42)
+        Me.lbSelectCaseOutput.TabIndex = 3
+        '
+        'lbSelectCase
+        '
+        Me.lbSelectCase.Location = New System.Drawing.Point(13, 78)
+        Me.lbSelectCase.Name = "lbSelectCase"
+        Me.lbSelectCase.Size = New System.Drawing.Size(45, 13)
+        Me.lbSelectCase.TabIndex = 1
+        Me.lbSelectCase.Text = "Enter #:"
+        '
+        'tbSelectCase
+        '
+        Me.tbSelectCase.Location = New System.Drawing.Point(76, 78)
+        Me.tbSelectCase.Name = "tbSelectCase"
+        Me.tbSelectCase.Size = New System.Drawing.Size(100, 20)
+        Me.tbSelectCase.TabIndex = 2
+        Me.tbSelectCase.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'btnSelectCase
+        '
+        Me.btnSelectCase.Location = New System.Drawing.Point(101, 146)
+        Me.btnSelectCase.Name = "btnSelectCase"
+        Me.btnSelectCase.Size = New System.Drawing.Size(75, 23)
+        Me.btnSelectCase.TabIndex = 4
+        Me.btnSelectCase.Text = "&Enter"
+        Me.btnSelectCase.UseVisualStyleBackColor = True
         '
         'frmDemoIfLoopArray
         '
@@ -818,7 +881,8 @@ Partial Class frmDemoIfLoopArray
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnReset
-        Me.ClientSize = New System.Drawing.Size(794, 676)
+        Me.ClientSize = New System.Drawing.Size(794, 791)
+        Me.Controls.Add(Me.grpSelectCase)
         Me.Controls.Add(Me.grpMethodAdd)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.grpReset)
@@ -858,6 +922,8 @@ Partial Class frmDemoIfLoopArray
         Me.grpReset.ResumeLayout(False)
         Me.grpMethodAdd.ResumeLayout(False)
         Me.grpMethodAdd.PerformLayout()
+        Me.grpSelectCase.ResumeLayout(False)
+        Me.grpSelectCase.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -935,4 +1001,10 @@ Partial Class frmDemoIfLoopArray
     Friend WithEvents btnAddDemo As Button
     Friend WithEvents lbNumberTwo As Label
     Friend WithEvents tbNumberTwo As TextBox
+    Friend WithEvents grpSelectCase As GroupBox
+    Friend WithEvents lblSelectCaseDescription As Label
+    Friend WithEvents lbSelectCaseOutput As Label
+    Friend WithEvents lbSelectCase As Label
+    Friend WithEvents tbSelectCase As TextBox
+    Friend WithEvents btnSelectCase As Button
 End Class

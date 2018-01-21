@@ -1013,7 +1013,6 @@ Public Class frmDemoIfLoopArray
         'https://docs.microsoft.com/en-us/dotnet/visual-basic/programming-guide/language-features/declared-elements/access-levels
         ' ----------------------------------------------------------------------------------
 
-
         ' declare a group box as 
         ' all other controls are
         ' within group boxes
@@ -1022,7 +1021,6 @@ Public Class frmDemoIfLoopArray
         ' loop through each control that Is directly
         ' placed on the form (so the group boxes)
         For Each controlGroupBox As Object In Me.Controls
-
 
             ' if it Is a group box (which it will be)
             If (TypeOf (controlGroupBox) Is GroupBox) Then
@@ -1056,6 +1054,48 @@ Public Class frmDemoIfLoopArray
         Next controlGroupBox
     End Sub
 
+#End Region
+
+#Region "Select Case"
+
+    ''' <summary>
+    ''' Private click event to demonstrate a select case statement
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnSelectCase_Click(sender As Object, e As EventArgs) Handles btnSelectCase.Click
+
+        Dim grade As String = String.Empty      ' variable to hold the grade letter
+        Dim output As String = String.Empty     ' variable to hold the output
+
+        ' get the grade from the text box
+        grade = tbSelectCase.Text.Trim()
+
+        ' compare the grade to the
+        ' ones in the different cases
+        Select Case grade
+
+            Case "A", "a"
+                output = "Nice!!!"
+            Case "B", "b"
+                output = "Respectable!"
+            Case "C", "c"
+                output = "Okay, not bad!"
+            Case "D", "d"
+                output = "A pass, is a pass."
+            Case "F", "f"
+                output = "Uh oh, better hide this from the parents."
+            Case Else ' if they did not pick something listed in the cases
+                ' Nicely(ish), tell then to try again. 
+                output = "What part of A, B, C, D, F did you not understand!" & vbCrLf & "Please try again!"
+        End Select
+
+        ' output the data to the output label
+        lbSelectCaseOutput.Text = output
+
+
+    End Sub
+
 
 
 #End Region
@@ -1079,7 +1119,9 @@ Public Class frmDemoIfLoopArray
                                                                         tbCreateArrayInput.GotFocus,
                                                                         tbMethodInput.GotFocus,
                                                                         tbNumberOne.GotFocus,
-                                                                        tbNumberTwo.GotFocus
+                                                                        tbNumberTwo.GotFocus,
+                                                                        tbSelectCase.GotFocus
+
 
         ' set the control name
         Dim controlName As String = CType(sender, TextBox).Name
@@ -1152,6 +1194,12 @@ Public Class frmDemoIfLoopArray
             ' to the appropriate button
             Me.AcceptButton = btnAddDemo
 
+        ElseIf controlName = "tbSelectCase" Then
+
+            ' set the accept button
+            ' to the appropriate button
+            Me.AcceptButton = btnSelectCase
+
         End If
 
     End Sub
@@ -1172,7 +1220,6 @@ Public Class frmDemoIfLoopArray
         Me.Close()
 
     End Sub
-
 
 #End Region
 
