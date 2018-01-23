@@ -103,6 +103,26 @@ Partial Class frmDemoIfLoopArray
         Me.lbSelectCase = New System.Windows.Forms.Label()
         Me.tbSelectCase = New System.Windows.Forms.TextBox()
         Me.btnSelectCase = New System.Windows.Forms.Button()
+        Me.grp2DJagged = New System.Windows.Forms.GroupBox()
+        Me.lbSixValue = New System.Windows.Forms.Label()
+        Me.lbSixRowColumn = New System.Windows.Forms.Label()
+        Me.lbFiveValue = New System.Windows.Forms.Label()
+        Me.lbFiveRowColumn = New System.Windows.Forms.Label()
+        Me.btn2dJaggedDisplay = New System.Windows.Forms.Button()
+        Me.btn2dJaggedReset = New System.Windows.Forms.Button()
+        Me.lbFourValue = New System.Windows.Forms.Label()
+        Me.lbFourRowColumn = New System.Windows.Forms.Label()
+        Me.lbThreeValue = New System.Windows.Forms.Label()
+        Me.lbThreeRowColumn = New System.Windows.Forms.Label()
+        Me.lbTwoValue = New System.Windows.Forms.Label()
+        Me.lbTwoRowColumn = New System.Windows.Forms.Label()
+        Me.lbOneValue = New System.Windows.Forms.Label()
+        Me.lbOneRowColumn = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lb2dJaggedOutput = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.tb2dJaggedInput = New System.Windows.Forms.TextBox()
+        Me.btn2dJaggedEnter = New System.Windows.Forms.Button()
         Me.grpIf.SuspendLayout()
         Me.grpNestedIf.SuspendLayout()
         Me.grpForLoop.SuspendLayout()
@@ -116,6 +136,7 @@ Partial Class frmDemoIfLoopArray
         Me.grpReset.SuspendLayout()
         Me.grpMethodAdd.SuspendLayout()
         Me.grpSelectCase.SuspendLayout()
+        Me.grp2DJagged.SuspendLayout()
         Me.SuspendLayout()
         '
         'grpIf
@@ -709,12 +730,12 @@ Partial Class frmDemoIfLoopArray
         '
         Me.grpReset.Controls.Add(Me.lblReset)
         Me.grpReset.Controls.Add(Me.btnReset)
-        Me.grpReset.Location = New System.Drawing.Point(600, 390)
+        Me.grpReset.Location = New System.Drawing.Point(404, 612)
         Me.grpReset.Name = "grpReset"
-        Me.grpReset.Size = New System.Drawing.Size(190, 222)
-        Me.grpReset.TabIndex = 11
+        Me.grpReset.Size = New System.Drawing.Size(190, 174)
+        Me.grpReset.TabIndex = 13
         Me.grpReset.TabStop = False
-        Me.grpReset.Text = "12. Method/&Void Function"
+        Me.grpReset.Text = "13. Method/&Void Function"
         '
         'lblReset
         '
@@ -741,7 +762,7 @@ Partial Class frmDemoIfLoopArray
         Me.btnExit.Location = New System.Drawing.Point(715, 766)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 23)
-        Me.btnExit.TabIndex = 13
+        Me.btnExit.TabIndex = 14
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -826,12 +847,12 @@ Partial Class frmDemoIfLoopArray
         Me.grpSelectCase.Controls.Add(Me.lbSelectCase)
         Me.grpSelectCase.Controls.Add(Me.tbSelectCase)
         Me.grpSelectCase.Controls.Add(Me.btnSelectCase)
-        Me.grpSelectCase.Location = New System.Drawing.Point(12, 614)
+        Me.grpSelectCase.Location = New System.Drawing.Point(12, 613)
         Me.grpSelectCase.Name = "grpSelectCase"
         Me.grpSelectCase.Size = New System.Drawing.Size(190, 175)
         Me.grpSelectCase.TabIndex = 12
         Me.grpSelectCase.TabStop = False
-        Me.grpSelectCase.Text = "13. Select Case"
+        Me.grpSelectCase.Text = "12. Select Case"
         '
         'lblSelectCaseDescription
         '
@@ -875,6 +896,193 @@ Partial Class frmDemoIfLoopArray
         Me.btnSelectCase.Text = "&Enter"
         Me.btnSelectCase.UseVisualStyleBackColor = True
         '
+        'grp2DJagged
+        '
+        Me.grp2DJagged.Controls.Add(Me.lbSixValue)
+        Me.grp2DJagged.Controls.Add(Me.lbSixRowColumn)
+        Me.grp2DJagged.Controls.Add(Me.lbFiveValue)
+        Me.grp2DJagged.Controls.Add(Me.lbFiveRowColumn)
+        Me.grp2DJagged.Controls.Add(Me.btn2dJaggedDisplay)
+        Me.grp2DJagged.Controls.Add(Me.btn2dJaggedReset)
+        Me.grp2DJagged.Controls.Add(Me.lbFourValue)
+        Me.grp2DJagged.Controls.Add(Me.lbFourRowColumn)
+        Me.grp2DJagged.Controls.Add(Me.lbThreeValue)
+        Me.grp2DJagged.Controls.Add(Me.lbThreeRowColumn)
+        Me.grp2DJagged.Controls.Add(Me.lbTwoValue)
+        Me.grp2DJagged.Controls.Add(Me.lbTwoRowColumn)
+        Me.grp2DJagged.Controls.Add(Me.lbOneValue)
+        Me.grp2DJagged.Controls.Add(Me.lbOneRowColumn)
+        Me.grp2DJagged.Controls.Add(Me.Label1)
+        Me.grp2DJagged.Controls.Add(Me.lb2dJaggedOutput)
+        Me.grp2DJagged.Controls.Add(Me.Label3)
+        Me.grp2DJagged.Controls.Add(Me.tb2dJaggedInput)
+        Me.grp2DJagged.Controls.Add(Me.btn2dJaggedEnter)
+        Me.grp2DJagged.Location = New System.Drawing.Point(600, 397)
+        Me.grp2DJagged.Name = "grp2DJagged"
+        Me.grp2DJagged.Size = New System.Drawing.Size(190, 363)
+        Me.grp2DJagged.TabIndex = 11
+        Me.grp2DJagged.TabStop = False
+        Me.grp2DJagged.Text = "11. 2D and Jagged Arrays"
+        '
+        'lbSixValue
+        '
+        Me.lbSixValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbSixValue.Location = New System.Drawing.Point(95, 315)
+        Me.lbSixValue.Name = "lbSixValue"
+        Me.lbSixValue.Size = New System.Drawing.Size(80, 15)
+        Me.lbSixValue.TabIndex = 16
+        '
+        'lbSixRowColumn
+        '
+        Me.lbSixRowColumn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbSixRowColumn.Location = New System.Drawing.Point(13, 315)
+        Me.lbSixRowColumn.Name = "lbSixRowColumn"
+        Me.lbSixRowColumn.Size = New System.Drawing.Size(80, 15)
+        Me.lbSixRowColumn.TabIndex = 15
+        '
+        'lbFiveValue
+        '
+        Me.lbFiveValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbFiveValue.Location = New System.Drawing.Point(95, 297)
+        Me.lbFiveValue.Name = "lbFiveValue"
+        Me.lbFiveValue.Size = New System.Drawing.Size(80, 15)
+        Me.lbFiveValue.TabIndex = 14
+        '
+        'lbFiveRowColumn
+        '
+        Me.lbFiveRowColumn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbFiveRowColumn.Location = New System.Drawing.Point(13, 297)
+        Me.lbFiveRowColumn.Name = "lbFiveRowColumn"
+        Me.lbFiveRowColumn.Size = New System.Drawing.Size(80, 15)
+        Me.lbFiveRowColumn.TabIndex = 13
+        '
+        'btn2dJaggedDisplay
+        '
+        Me.btn2dJaggedDisplay.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btn2dJaggedDisplay.Location = New System.Drawing.Point(18, 336)
+        Me.btn2dJaggedDisplay.Name = "btn2dJaggedDisplay"
+        Me.btn2dJaggedDisplay.Size = New System.Drawing.Size(75, 23)
+        Me.btn2dJaggedDisplay.TabIndex = 17
+        Me.btn2dJaggedDisplay.Text = "&Display"
+        Me.btn2dJaggedDisplay.UseVisualStyleBackColor = True
+        '
+        'btn2dJaggedReset
+        '
+        Me.btn2dJaggedReset.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btn2dJaggedReset.Location = New System.Drawing.Point(99, 336)
+        Me.btn2dJaggedReset.Name = "btn2dJaggedReset"
+        Me.btn2dJaggedReset.Size = New System.Drawing.Size(75, 23)
+        Me.btn2dJaggedReset.TabIndex = 18
+        Me.btn2dJaggedReset.Text = "&Clear"
+        Me.btn2dJaggedReset.UseVisualStyleBackColor = True
+        '
+        'lbFourValue
+        '
+        Me.lbFourValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbFourValue.Location = New System.Drawing.Point(95, 279)
+        Me.lbFourValue.Name = "lbFourValue"
+        Me.lbFourValue.Size = New System.Drawing.Size(80, 15)
+        Me.lbFourValue.TabIndex = 12
+        '
+        'lbFourRowColumn
+        '
+        Me.lbFourRowColumn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbFourRowColumn.Location = New System.Drawing.Point(13, 279)
+        Me.lbFourRowColumn.Name = "lbFourRowColumn"
+        Me.lbFourRowColumn.Size = New System.Drawing.Size(80, 15)
+        Me.lbFourRowColumn.TabIndex = 11
+        '
+        'lbThreeValue
+        '
+        Me.lbThreeValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbThreeValue.Location = New System.Drawing.Point(95, 260)
+        Me.lbThreeValue.Name = "lbThreeValue"
+        Me.lbThreeValue.Size = New System.Drawing.Size(80, 15)
+        Me.lbThreeValue.TabIndex = 10
+        '
+        'lbThreeRowColumn
+        '
+        Me.lbThreeRowColumn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbThreeRowColumn.Location = New System.Drawing.Point(13, 260)
+        Me.lbThreeRowColumn.Name = "lbThreeRowColumn"
+        Me.lbThreeRowColumn.Size = New System.Drawing.Size(80, 15)
+        Me.lbThreeRowColumn.TabIndex = 9
+        '
+        'lbTwoValue
+        '
+        Me.lbTwoValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbTwoValue.Location = New System.Drawing.Point(95, 242)
+        Me.lbTwoValue.Name = "lbTwoValue"
+        Me.lbTwoValue.Size = New System.Drawing.Size(80, 15)
+        Me.lbTwoValue.TabIndex = 8
+        '
+        'lbTwoRowColumn
+        '
+        Me.lbTwoRowColumn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbTwoRowColumn.Location = New System.Drawing.Point(13, 242)
+        Me.lbTwoRowColumn.Name = "lbTwoRowColumn"
+        Me.lbTwoRowColumn.Size = New System.Drawing.Size(80, 15)
+        Me.lbTwoRowColumn.TabIndex = 7
+        '
+        'lbOneValue
+        '
+        Me.lbOneValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbOneValue.Location = New System.Drawing.Point(95, 224)
+        Me.lbOneValue.Name = "lbOneValue"
+        Me.lbOneValue.Size = New System.Drawing.Size(80, 15)
+        Me.lbOneValue.TabIndex = 6
+        '
+        'lbOneRowColumn
+        '
+        Me.lbOneRowColumn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lbOneRowColumn.Location = New System.Drawing.Point(13, 224)
+        Me.lbOneRowColumn.Name = "lbOneRowColumn"
+        Me.lbOneRowColumn.Size = New System.Drawing.Size(80, 15)
+        Me.lbOneRowColumn.TabIndex = 5
+        '
+        'Label1
+        '
+        Me.Label1.Location = New System.Drawing.Point(12, 18)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(163, 100)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Enter a number click Enter. This array of the code will add the number to a 2D ar" &
+    "ray. Click Display and it will populate a number of Label held ina Jagged array." &
+    " " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
+        'lb2dJaggedOutput
+        '
+        Me.lb2dJaggedOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lb2dJaggedOutput.Location = New System.Drawing.Point(16, 150)
+        Me.lb2dJaggedOutput.Name = "lb2dJaggedOutput"
+        Me.lb2dJaggedOutput.Size = New System.Drawing.Size(160, 41)
+        Me.lb2dJaggedOutput.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.Location = New System.Drawing.Point(13, 126)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(45, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Enter #:"
+        '
+        'tb2dJaggedInput
+        '
+        Me.tb2dJaggedInput.Location = New System.Drawing.Point(76, 126)
+        Me.tb2dJaggedInput.Name = "tb2dJaggedInput"
+        Me.tb2dJaggedInput.Size = New System.Drawing.Size(100, 20)
+        Me.tb2dJaggedInput.TabIndex = 1
+        Me.tb2dJaggedInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'btn2dJaggedEnter
+        '
+        Me.btn2dJaggedEnter.Location = New System.Drawing.Point(100, 195)
+        Me.btn2dJaggedEnter.Name = "btn2dJaggedEnter"
+        Me.btn2dJaggedEnter.Size = New System.Drawing.Size(75, 23)
+        Me.btn2dJaggedEnter.TabIndex = 4
+        Me.btn2dJaggedEnter.Text = "&Enter"
+        Me.btn2dJaggedEnter.UseVisualStyleBackColor = True
+        '
         'frmDemoIfLoopArray
         '
         Me.AcceptButton = Me.btnIfDemo
@@ -882,6 +1090,7 @@ Partial Class frmDemoIfLoopArray
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnReset
         Me.ClientSize = New System.Drawing.Size(794, 791)
+        Me.Controls.Add(Me.grp2DJagged)
         Me.Controls.Add(Me.grpSelectCase)
         Me.Controls.Add(Me.grpMethodAdd)
         Me.Controls.Add(Me.btnExit)
@@ -924,6 +1133,8 @@ Partial Class frmDemoIfLoopArray
         Me.grpMethodAdd.PerformLayout()
         Me.grpSelectCase.ResumeLayout(False)
         Me.grpSelectCase.PerformLayout()
+        Me.grp2DJagged.ResumeLayout(False)
+        Me.grp2DJagged.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1007,4 +1218,24 @@ Partial Class frmDemoIfLoopArray
     Friend WithEvents lbSelectCase As Label
     Friend WithEvents tbSelectCase As TextBox
     Friend WithEvents btnSelectCase As Button
+    Friend WithEvents grp2DJagged As GroupBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lb2dJaggedOutput As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents tb2dJaggedInput As TextBox
+    Friend WithEvents btn2dJaggedEnter As Button
+    Friend WithEvents lbOneValue As Label
+    Friend WithEvents lbOneRowColumn As Label
+    Friend WithEvents lbFourValue As Label
+    Friend WithEvents lbFourRowColumn As Label
+    Friend WithEvents lbThreeValue As Label
+    Friend WithEvents lbThreeRowColumn As Label
+    Friend WithEvents lbTwoValue As Label
+    Friend WithEvents lbTwoRowColumn As Label
+    Friend WithEvents btn2dJaggedDisplay As Button
+    Friend WithEvents btn2dJaggedReset As Button
+    Friend WithEvents lbFiveValue As Label
+    Friend WithEvents lbFiveRowColumn As Label
+    Friend WithEvents lbSixValue As Label
+    Friend WithEvents lbSixRowColumn As Label
 End Class

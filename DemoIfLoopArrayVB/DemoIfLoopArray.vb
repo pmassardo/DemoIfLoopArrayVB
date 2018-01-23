@@ -841,7 +841,7 @@ Public Class frmDemoIfLoopArray
     ''' <param name="userInput">ByVal String</param>
     ''' <param name="returnInputInteger">ByRef - Integer</param>
     ''' <returns></returns>
-    Private Function IsValidInput(userInput As String, ByRef validInputInteger As Integer) As Boolean
+    Private Function IsValidInput(ByVal userInput As String, ByRef validInputInteger As Integer) As Boolean
 
         Const minimumArraySize As Integer = 1
 
@@ -1100,6 +1100,216 @@ Public Class frmDemoIfLoopArray
 
 #End Region
 
+#Region "2D & Jagged Array Demo"
+
+    ' form/class level constants
+    Private Const numberRowColumnLabels As Integer = 6  ' how many RowColumn labels will there be 6
+    Private Const numberValueLabels As Integer = 6      ' how many value labels will there be 6
+    Private Const numberControlArrays As Integer = 2    ' how many control array will be held by the jagged array 2
+
+    Private Const numberColumnLastIndex As Integer = 1  ' what is the last column index for the 2d array
+    Private Const numberRowLastIndex As Integer = 2     ' what is the last row index for the 2d array
+
+    Private Const indexValueLabels As Integer = 0       ' holds the index of the Value labels
+    Private Const indexRowColumnLabels As Integer = 1   ' holds the index of the RowColumn labels
+
+    ' form/class level control arrays
+    Private valueLabels(numberValueLabels - 1) As Label         ' create an array to hold the Value labels
+    Private rowColumnLabels(numberRowColumnLabels - 1) As Label   ' create an array to hold the RowColumn labels
+
+    ' form/class level jagged array an array of arrays
+    ' set the last index to be 1 as numberControlArrays is 2 - 1 = 1
+    Private allControls(numberControlArrays - 1) As Object
+
+    ' 2 dimensional array
+    ' 2 columns = 1
+    ' 3 rows = 2
+    Private numberArray(numberRowLastIndex, numberColumnLastIndex) As Double
+
+    Private columnCounter As Integer = 0
+    Private rowCounter As Integer = 0
+
+    ''' <summary>
+    ''' frmDemoIfLoopArray_Load - load the controls into the respective control arrays
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub frmDemoIfLoopArray_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        ' load the controls into the 
+        ' respective control arrays
+
+        ' load the value labels into
+        ' their control array
+        valueLabels(0) = lbOneValue
+        valueLabels(1) = lbTwoValue
+        valueLabels(2) = lbThreeValue
+        valueLabels(3) = lbFourValue
+        valueLabels(4) = lbFiveValue
+        valueLabels(5) = lbSixValue
+
+        ' load the row column labels into
+        ' their control array
+        rowColumnLabels(0) = lbOneRowColumn
+        rowColumnLabels(1) = lbTwoRowColumn
+        rowColumnLabels(2) = lbThreeRowColumn
+        rowColumnLabels(3) = lbFourRowColumn
+        rowColumnLabels(4) = lbFiveRowColumn
+        rowColumnLabels(5) = lbSixRowColumn
+
+        ' load the valueLabels control array and the
+        ' rowColumnLabels  control array into the
+        ' jagged array
+        allControls(indexValueLabels) = valueLabels
+        allControls(indexRowColumnLabels) = rowColumnLabels
+
+    End Sub
+
+    ''' <summary>
+    ''' btn2dJaggedEnter_Click - enters the value entered by the user into the numberArray and displays it in the output label
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btn2dJaggedEnter_Click(sender As Object, e As EventArgs) Handles btn2dJaggedEnter.Click
+
+        ' input the number entered into the array
+        ' no validation to simplify the code
+        numberArray(rowCounter, columnCounter) = Convert.ToDouble(tb2dJaggedInput.Text)
+
+        ' output the number to the output label
+        lb2dJaggedOutput.Text += numberArray(rowCounter, columnCounter).ToString() & " "
+
+        ' if the row lindex is less than the last index
+        ' and the column counter is the last column
+        ' move to the next row and reset the column to the start
+        If rowCounter < numberRowLastIndex And columnCounter = numberColumnLastIndex Then
+
+            'move to the next row
+            rowCounter += 1
+
+            'reset to the first column
+            columnCounter = 0
+
+            ' add carriage return line feed 
+            ' to move to the next row
+            lb2dJaggedOutput.Text += vbCrLf
+
+        ElseIf rowCounter = numberRowLastIndex And columnCounter = numberColumnLastIndex Then
+            ' if this is the last row and last index
+
+            ' disable the control so the user cannot enter 
+            ' any more numbers
+            btn2dJaggedEnter.Enabled = False
+
+        Else
+
+            ' increment the column counter
+            columnCounter += 1
+
+        End If
+
+        ' clear the input text box
+        tb2dJaggedInput.Text = String.Empty
+
+    End Sub
+
+    ''' <summary>
+    ''' btn2dJaggedDisplay_Click - displays the content of the numberArray (2D) 
+    '''                            into the rowColumnLabels and the valueLabels 
+    '''                            that are housed in the control arrays which 
+    '''                            are held in the jagged array.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btn2dJaggedDisplay_Click(sender As Object, e As EventArgs) Handles btn2dJaggedDisplay.Click
+
+        Dim controlIndex As Integer = 0         ' will hold the index or the current control
+        Dim currentValueLabel As Label          ' will hold the current ValueLabel
+        Dim currentRowColumnLabel As Label      ' will hold the current RowColumnLabel
+
+        ' loop through the rows
+        For rowIndex As Integer = 0 To numberArray.GetLength(0) - 1
+
+            ' loop through the columns
+            For columnIndex As Integer = 0 To numberArray.GetLength(1) - 1
+
+                ' multiply the row index by 2 and add the column index 
+                ' to get the current label index
+                controlIndex = (rowIndex * 2) + columnIndex ' will produce 0 1 2 3 4 5
+
+                ' The above code can also be replaced with the following
+                ' but I wanted to demonstrate doing it based on using
+                ' the row and column indexes of the number array
+                ' controlIndex += 1
+
+                ' get the current ValueLabel control from the control array
+                currentValueLabel = CType(CType(allControls(indexValueLabels), Label())(controlIndex), Label)
+
+                ' clear the current ValueLabel's text property
+                currentValueLabel.Text = numberArray(rowIndex, columnIndex).ToString()
+
+                ' get the current RowColumnLabel control from the control array
+                currentRowColumnLabel = CType(CType(allControls(indexRowColumnLabels), Label())(controlIndex), Label)
+
+                ' clear the current RowColumn's text property
+                currentRowColumnLabel.Text = "Row-" & rowIndex & " Col-" & columnIndex
+
+            Next columnIndex ' next column
+
+        Next rowIndex ' next row
+
+    End Sub
+
+    ''' <summary>
+    ''' btn2dJaggedReset_Click - clears the controls in this section of code 
+    '''                          looping the the control arrays in the jagged
+    '''                          array. And looping through rows and columns
+    '''                          in the 2D array.
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btn2dJaggedReset_Click(sender As Object, e As EventArgs) Handles btn2dJaggedReset.Click
+
+        ' clear all the label text properties in the control arrays
+        ' loop through the array of arrays
+        For arrayIndex As Integer = 0 To allControls.Length - 1
+
+            ' loop through each specific control array
+            For controlIndex As Integer = 0 To CType(allControls(arrayIndex), Label()).Length - 1
+
+                ' clear the current label
+                CType(CType(allControls(arrayIndex), Label())(controlIndex), Label).Text = String.Empty
+
+            Next controlIndex
+
+        Next arrayIndex
+
+        ' loop through each row
+        For rowIndex As Integer = 0 To numberArray.GetLength(0) - 1
+
+            ' loop through each column
+            For columnIndex As Integer = 0 To numberArray.GetLength(1) - 1
+
+                ' set the value to zero
+                numberArray(rowIndex, columnIndex) = 0
+
+            Next columnIndex ' next column
+
+        Next rowIndex ' next row
+
+        ' reset form/class level variables
+        columnCounter = 0   ' reset the input column counter
+        rowCounter = 0      ' reset the input row counter
+
+        lb2dJaggedOutput.Text = String.Empty
+
+        ' enable the enter button
+        btn2dJaggedEnter.Enabled = True
+
+    End Sub
+
+#End Region
+
 #Region "Assign appropriate Accept Button"
 
     ''' <summary>
@@ -1120,7 +1330,8 @@ Public Class frmDemoIfLoopArray
                                                                         tbMethodInput.GotFocus,
                                                                         tbNumberOne.GotFocus,
                                                                         tbNumberTwo.GotFocus,
-                                                                        tbSelectCase.GotFocus
+                                                                        tbSelectCase.GotFocus,
+                                                                        tb2dJaggedInput.GotFocus
 
 
         ' set the control name
@@ -1200,6 +1411,12 @@ Public Class frmDemoIfLoopArray
             ' to the appropriate button
             Me.AcceptButton = btnSelectCase
 
+        ElseIf controlName = "tb2dJaggedInput" Then
+
+            ' set the accept button
+            ' to the appropriate button
+            Me.AcceptButton = btn2dJaggedEnter
+
         End If
 
     End Sub
@@ -1220,6 +1437,7 @@ Public Class frmDemoIfLoopArray
         Me.Close()
 
     End Sub
+
 
 #End Region
 
